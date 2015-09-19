@@ -2,12 +2,12 @@
   "uuid": "72047b38-d650-4850-97c6-2a1518291be7",
   "shortName": "static-bg",
   "longName": "static-bg",
-  "companyName": "MakeAwesomeHappen",
+  "companyName": "lunete",
   "versionLabel": "1.0",
   "sdkVersion": "3",
   "targetPlatforms": ["aplite", "basalt"],
   "watchapp": {
-    "watchface": false
+    "watchface": true
   },
   "appKeys": {
     "dummy": 0
