@@ -31,17 +31,16 @@ static void update_time() {
 
 static void main_window_load(Window *window) {
 
-        // Create bitmap
+    // Create bitmap
     s_example_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_NUM_1);
     s_bitmap_layer = bitmap_layer_create(GRect(0, 0, 144, 168));
-    //s_bitmap_layer = bitmap_layer_create(layer_get_bounds(window_layer));
     bitmap_layer_set_bitmap(s_bitmap_layer, s_example_bitmap);
 #ifdef PBL_PLATFORM_APLITE
     bitmap_layer_set_compositing_mode(s_bitmap_layer, GCompOpAssign);
 #elif PBL_PLATFORM_BASALT
     bitmap_layer_set_compositing_mode(s_bitmap_layer, GCompOpSet);
     #endif
-    //layer_add_child(window_layer, bitmap_layer_get_layer(s_bitmap_layer));
+
     layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_bitmap_layer));
 
     // Create time TextLayer
@@ -74,10 +73,6 @@ static void main_window_unload(Window *window) {
 
     // destroy the text layer
     text_layer_destroy(s_time_layer);
-
-    // destroy location layer
-    //text_layer_destroy(s_location_layer);
-    //fonts_unload_custom_font(s_location_font);
 }
 
 
@@ -97,7 +92,6 @@ static void init() {
     });
 
     window_stack_push(s_main_window, true);
-    //update_time();
 
     // Register with TickTimerService
     tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
