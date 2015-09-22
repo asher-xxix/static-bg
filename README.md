@@ -7,6 +7,13 @@ This was just a tiny project that created a simple static watchface for the Pebb
 ![](pebble_screenshot_2015-09-19_19-54-52.png)
 
 
-To install this on your pebble make sure you have the dev connection enabled on your phone and the pebble sdk is installed. Then in terminal use
+To install this on your pebble make sure you have the dev connection enabled on your phone and the pebble sdk is installed on your computer. THe sdk can be gotten with
+
+`brew install pebble/pebble-sdk/pebble-sdk
+`
+
+Then use
 
 `pebble build && pebble install --phone <your phone ip here>`
+
+inside the root folder of this watchface and it will be installed to your pebble!
