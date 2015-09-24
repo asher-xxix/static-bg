@@ -17,3 +17,9 @@ Then use
 `pebble build && pebble install --phone <your phone ip here>`
 
 inside the root folder of this watchface and it will be installed to your pebble!
+
+
+### Things to Add
+- current date
+- battery indicator (if possible)
+- temperature
